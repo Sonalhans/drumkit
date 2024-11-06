@@ -58,7 +58,7 @@ def show_drum_kit():
     buttons = []
     for key, img_path in image_map.items():
         img = Image.open(img_path)
-        img = img.resize((100, 100), Image.ANTIALIAS)
+        img = img.resize((100, 100), Image.LANCZOS)
         img = ImageTk.PhotoImage(img)
         
         button = tk.Button(root, image=img, text=key.upper(), font=("Arvo", 15), compound="top",
